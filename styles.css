@@ -1,0 +1,67 @@
+/* for assignment 2 */
+
+main {
+    max-width: 60ch;
+    margin-inline: auto;
+}
+
+header{
+    font-family: var(--header-font-family);
+    padding-block: .5rem;
+}
+
+.topnav {
+    padding: 50px;
+    width: 100%;
+    position:relative;
+    right: -38px;
+}
+
+.topnav a {
+    color : #424241;
+    width : 10%;
+    text-decoration: none;
+    text-align: center;
+    float: right;
+}
+
+.topnav a:hover {
+    color:black;
+}
+
+.topnav a.active {
+    color: #A798BF;
+}
+
+.hr {
+    position: relative;
+    top: -20px;
+}
+
+.bunny {
+    position:relative;
+    left: -340px;
+    bottom: -55px;
+}
+
+p {
+    position: relative;
+    right : -60px;
+    top: -240px;
+    font-size: 1.8em;
+    
+}
+
+h2 {
+    font-family: var(--text-font-family);
+}
+
+p2{
+    font-weight: 300;
+    position: relative;
+    right: -60px; 
+}
+
+html {
+    background-color: #f6f1e4;
+}
