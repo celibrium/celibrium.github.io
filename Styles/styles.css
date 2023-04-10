@@ -13,15 +13,17 @@ header{
 .topnav {
     padding: 50px;
     width: 100%;
-    position:relative;
-    right: -38px;
+    display: inline-block;
+    font-size: 17px;
 }
 
 .topnav a {
     color : #424241;
-    width : 10%;
     text-decoration: none;
     text-align: center;
+    display: inline-block;
+    width: 10%;
+    
 }
 
 .topnav a:hover {
@@ -32,14 +34,23 @@ header{
     color: #A798BF;
 }
 
-.dropbtn {
+.dropdown .dropbtn {
     background-color: #f6f1e4;
+    outline: none;
+    border: none;
+    color: #424241;
 }
 
 .dropdown {
     position: relative;
     display: inline-block;
   }
+
+.fa{
+    display: inline-block;
+    color:#000;
+    font-size: 14px;
+}
 
 .dropdown-content{
   display: none;
@@ -50,44 +61,53 @@ header{
 }
 
 .dropdown-content a {
-    color: black;
+    
+    color: #424241;
     padding: 12px 16px;
     text-decoration: none;
+    width: 25%;
     display: block;
   }
 
 .dropdown:hover .dropdown-content {
-    display: contents;
+    display: block;
+}
+
+.contact{
+    position: relative;
+    right: -340px;
+    top: -27px;
 }
 
 .hr {
     position: relative;
-    top: -20px;
+    top: -50px;
 }
 
 .bunny {
     position:relative;
     left: -340px;
     bottom: -55px;
+    top: -20px;
 }
 
 .facebooklogo {
    position: relative;
    right: -920px; 
-   bottom: -185px;
+   bottom: -145px;
 }
 
 .githublogo {
     position: relative;
     right: -920px;
-    bottom: -62px;
+    bottom: -22px;
 
 }
 
 .linkedinlogo{
     position: relative;
     right: -920px;
-    top: -60px;
+    top: -100px;
 }
 
 p {
@@ -101,7 +121,7 @@ p {
 h2 {
     font-family: var(--text-font-family);
     position: relative;
-    top: -120px;
+    top: -200px;
 }
 
 p2{
@@ -125,7 +145,7 @@ p3 {
     height: 30px;
     border: 1px solid #000;
     right: -60px;
-    top: -270px;
+    top: -350px;
 }
 html {
     background-color: #f6f1e4;
