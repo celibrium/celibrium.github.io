@@ -8,9 +8,34 @@ const player = { x: 100, y: 100, width: 50, height: 50, speed: 5 };
 const avatar = new Image();
 avatar.src = './images/mainSprite.png';
 
+// set the current image
+let currImage = avatar;
+
+const avatarLeft = new Image();
+avatarLeft.src = './images/spriteLeft.png'
+const avatarRight = new Image();
+avatarRight.src = './images/spriteRight.png'
+const avatarUp = new Image();
+avatarUp.src = './images/spriteUp.png'
+
 // handle user input
 const keys = {};
-document.addEventListener('keydown', (e) => keys[e.key] = true);
+document.addEventListener('keydown', (e) =>{
+    keys[e.key] = true;
+
+    if (e.key === 'ArrowLeft') {
+        currImage = avatarLeft;
+    }
+    else if (e.key === 'ArrowRight') {
+        currImage = avatarRight;
+    }
+    else if (e.key === 'ArrowUp') {
+        currImage = avatarUp;
+    }
+    else {
+        currImage = avatar;
+    }
+});
 document.addEventListener('keyup', (e) => keys[e.key] = false);
 
 // game loop
@@ -25,7 +50,7 @@ function gameLoop() {
   if (keys['ArrowRight']) player.x += player.speed;
 
   // draw player
-  ctx.drawImage(avatar, player.x, player.y, 40, 50);
+  ctx.drawImage(currImage, player.x, player.y, 40, 50);
 
   requestAnimationFrame(gameLoop); // Continue the loop
 }
