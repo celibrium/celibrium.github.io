@@ -48,4 +48,17 @@ export const experiences = [
       'Developed a full-stack mock trading platform using Java and Spring Boot, integrating secure RESTful APIs to streamline transaction management.',
     ],
   },
+  {
+    company: 'Kevares Autonomous Service',
+    role: 'Software Engineer Intern',
+    dates: 'May 2023 — August 2023',
+    location: 'Remote',
+    status: 'Quest complete',
+    technologies: ['Vue.js', 'UI Components', 'Technical Documentation'],
+    accomplishments: [
+      'Implemented modular, reusable UI components for the landing page, streamlining development and establishing consistent design patterns.',
+      'Implemented a scaling interface in Vue.js that allowed users to zoom and adjust robot inspection map views, improving data visibility and interaction precision.',
+      'Collaborated with cross-functional teams to gather project requirements and specifications, translating complex technical concepts into clear documentation for non-technical stakeholders.',
+    ],
+  },
 ] as const;

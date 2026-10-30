@@ -55,7 +55,7 @@ function ExperienceLog() {
         >
           <span className="experience-marker" aria-hidden="true">{active === index ? '◆' : '◇'}</span>
           <span className="experience-tab-copy"><strong>{experience.company}</strong><small>{experience.role}</small></span>
-          <span className="experience-year">{experience.dates.slice(0, 4)}</span>
+          <span className="experience-year">{experience.dates.match(/\d{4}/)?.[0]}</span>
         </button>)}
       </div>
       <p className="experience-controls">↑ ↓ SELECT ENTRY</p>
@@ -160,7 +160,7 @@ export default function App() {
       </AnimatePresence>
     </main>
     {!chapter && <aside className="landscape-caption" aria-hidden="true"><span>come explore my around my portfolio!</span></aside>}
-    <footer className="bottom-bar"><span className="footer-credit">CHARMAINE LEE</span><div className="utility-controls"><button onClick={() => setSound(s => !s)} aria-pressed={sound} aria-label={sound ? 'Disable interface sound' : 'Enable interface sound'}>{sound ? <Volume2 size={15}/> : <VolumeX size={15}/>}<span>SOUND {sound ? 'ON' : 'OFF'}</span></button><span className="utility-divider"/>{document.fullscreenEnabled && <button onClick={toggleFullscreen} aria-label={fullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}>{fullscreen ? <Minimize size={15}/> : <Maximize size={15}/>}</button>}</div></footer>
+    <footer className="bottom-bar controls-only"><div className="utility-controls"><button onClick={() => setSound(s => !s)} aria-pressed={sound} aria-label={sound ? 'Disable interface sound' : 'Enable interface sound'}>{sound ? <Volume2 size={15}/> : <VolumeX size={15}/>}<span>SOUND {sound ? 'ON' : 'OFF'}</span></button><span className="utility-divider"/>{document.fullscreenEnabled && <button onClick={toggleFullscreen} aria-label={fullscreen ? 'Exit fullscreen' : 'Enter fullscreen'}>{fullscreen ? <Minimize size={15}/> : <Maximize size={15}/>}</button>}</div></footer>
     <div role="status" className="notice">{notice}</div>
   </div></MotionConfig>;
 }

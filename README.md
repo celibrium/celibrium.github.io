@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Run `npm run build` for a type-checked production build, then `npm run preview` to preview it. Publish the generated `dist` directory through a GitHub Pages build workflow; the React source cannot be served directly by Pages.
+Run `npm run build` for a type-checked production build, then `npm run preview` to preview it. Pushes to `main` build and deploy the generated `dist` directory through the GitHub Pages workflow in `.github/workflows/deploy.yml`.
 
 ## Customize
 
